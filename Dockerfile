@@ -1,4 +1,4 @@
-FROM gentoo/stage3:amd64-musl-hardened
+FROM gentoo/stage3:amd64-musl
 
 RUN mkdir /etc/portage/repos.conf && \
 	mkdir /etc/portage/sets && \
