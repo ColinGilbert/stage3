@@ -25,3 +25,4 @@ for t in tags:
     os.system('git commit  -m "' + t + '"')
 
 os.system('git checkout master')
+os.system('rm Dockerfile')
