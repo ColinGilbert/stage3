@@ -13,6 +13,7 @@ for t in tags:
     os.system('rm *~')
     os.system('rm .*.sw*')
     os.system('rm -rf __pycache__')
+    os.system('rm Dockerfile.in')
     os.system('git add . && git commit -m "Cleanup"')
 
 os.system('git checkout master')
