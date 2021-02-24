@@ -18,6 +18,7 @@ for t in tags:
     os.system('git checkout -b ' + t)
     head_line = first_line + ":" + t + '\n'
     lines[0] = head_line
+    os.system('rm Dockerfile')
     with open('Dockerfile', 'w') as outfile:
         outfile.writelines(lines)
     os.system('rm -rf __pycache__')
