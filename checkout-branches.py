@@ -7,8 +7,7 @@ from tags import get_tags
 
 tags = get_tags()
 
-os.system('git checkout master')
-os.system('rm Dockerfile')
+os.system('git checkout master && rm Dockerfile')
 
 with open('Dockerfile.in') as infile:
    lines = infile.readlines()
