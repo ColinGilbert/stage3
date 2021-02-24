@@ -8,6 +8,7 @@ from tags import get_tags
 tags = get_tags()
 
 os.system('git checkout master')
+os.system('rm Dockerfile')
 for t in tags:
     os.system('git checkout ' + t)
     with open('Dockerfile.in') as infile:
