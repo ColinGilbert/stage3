@@ -12,10 +12,11 @@ os.system('rm Dockerfile')
 
 with open('Dockerfile.in') as infile:
    lines = infile.readlines()
+   first_line = lines[0].strip()
 
 for t in tags:
     os.system('git checkout -b ' + t)
-    head_line = lines[0].strip() + ":" + t + '\n'
+    head_line = first_line + ":" + t + '\n'
     lines[0] = head_line
     with open('Dockerfile', 'w') as outfile:
         outfile.writelines(lines)
