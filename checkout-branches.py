@@ -17,7 +17,7 @@ for t in tags:
     os.system('rm Dockerfile')
     with open('Dockerfile', 'w') as outfile:
         outfile.writelines(lines)
-    os.system('rm -rf__pycache__')
+    os.system('rm -rf __pycache__')
     os.system('git add .')
     os.system('git commit -m "' + t + '"')
 
