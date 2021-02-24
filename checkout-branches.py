@@ -19,7 +19,6 @@ for t in tags:
     lines[0] = head_line
     with open('Dockerfile', 'w') as outfile:
         outfile.writelines(lines)
-    code = os.system('rm -rf __pycache__ & rm Dockerfile.in')
-    code = os.system('git add . && git commit  -m "' + t + '"')
+    code = os.system('rm -rf __pycache__ & git add . && git commit  -m "' + t + '"')
 
 code = os.system('git checkout master && rm Dockerfile')
