@@ -1,1 +1,3 @@
-checkout-branches.py
+**/.*.sw*
+**/__pycache__
+**/*~
