@@ -19,6 +19,6 @@ for t in tags:
         outfile.writelines(lines)
     os.system('rm -rf __pycache__')
     os.system('git add .')
-    os.system('git commit -m "' + t + '"')
+    os.system('git commit  -m "' + t + '"')
 
 os.system('git checkout master')
