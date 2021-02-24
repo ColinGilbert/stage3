@@ -7,7 +7,7 @@ from tags import get_tags
 
 tags = get_tags()
 
-code = os.system('git checkout master && rm Dockerfile')
+code = os.system('git checkout master')
 
 with open('Dockerfile.in') as infile:
    lines = infile.readlines()
@@ -21,4 +21,4 @@ for t in tags:
         outfile.writelines(lines)
     code = os.system('rm -rf __pycache__ & git add . && git commit  -m "' + t + '"')
 
-code = os.system('git checkout master && rm Dockerfile')
+code = os.system('git checkout master')
